@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Dezer\TinkoffInvestApiClient\Dto;
 
-class ErrorResponse extends BaseResponse
+class EmptyResponse extends BaseResponse
 {
-    public ErrorPayload $payload;
+    public array $payload = [];
 
-    public function getPayload(): ErrorPayload
+    public function getPayload(): array
     {
         return $this->payload;
     }

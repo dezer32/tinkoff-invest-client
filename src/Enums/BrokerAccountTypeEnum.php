@@ -9,7 +9,7 @@ use MyCLabs\Enum\Enum;
 /**
  * @method static self TINKOFF
  */
-class BrokerAccountType extends Enum
+class BrokerAccountTypeEnum extends Enum
 {
     private const TINKOFF = 'Tinkoff';
 }

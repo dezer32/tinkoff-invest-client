@@ -10,7 +10,7 @@ use MyCLabs\Enum\Enum;
  * @method static self OK
  * @method static self ERROR
  */
-class ResponseStatusCode extends Enum
+class ResponseStatusCodeEnum extends Enum
 {
     private const OK = 'Ok';
 

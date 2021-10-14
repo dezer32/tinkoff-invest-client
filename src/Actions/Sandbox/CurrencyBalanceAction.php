@@ -7,17 +7,20 @@ namespace Dezer\TinkoffInvestApiClient\Actions\Sandbox;
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;
 use Dezer\BaseHttpClient\Exceptions\ResponseException;
 use Dezer\TinkoffInvestApiClient\AbstractBaseHttpAction;
-use Dezer\TinkoffInvestApiClient\Dto\Sandbox\Register as RegisterDto;
-use Dezer\TinkoffInvestApiClient\Dto\Sandbox\RegisterResponse;
+use Dezer\TinkoffInvestApiClient\Contracts\BrokerAccountIdCompatible;
+use Dezer\TinkoffInvestApiClient\Dto\EmptyResponse;
+use Dezer\TinkoffInvestApiClient\Dto\Sandbox\CurrencyBalance;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\RequestOptions;
 use Spatie\DataTransferObject\Exceptions\UnknownProperties;
 
-class Register extends AbstractBaseHttpAction
+class CurrencyBalanceAction extends AbstractBaseHttpAction implements BrokerAccountIdCompatible
 {
-    public function __construct(
-        private RegisterDto $register
-    ) {
+    private CurrencyBalance $currencyBalance;
+
+    public function __construct(CurrencyBalance $currencyBalance)
+    {
+        $this->currencyBalance = $currencyBalance;
     }
 
     public function getMethod(): string
@@ -27,13 +30,13 @@ class Register extends AbstractBaseHttpAction
 
     public function getUri(): string
     {
-        return '/sandbox/register';
+        return '/sandbox/currencies/balance';
     }
 
     public function getOptions(): array
     {
         return [
-            RequestOptions::JSON => $this->register->toArray(),
+            RequestOptions::JSON => $this->currencyBalance->toArray(),
         ];
     }
 
@@ -41,8 +44,8 @@ class Register extends AbstractBaseHttpAction
      * @throws UnknownProperties
      * @throws ResponseException
      */
-    public function mapResponse(Response $response): RegisterResponse
+    public function mapResponse(Response $response): EmptyResponse
     {
-        return new RegisterResponse($this->getJsonFromResponse($response));
+        return new EmptyResponse($this->getJsonFromResponse($response));
     }
 }

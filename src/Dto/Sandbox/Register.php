@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Dezer\TinkoffInvestApiClient\Dto\Sandbox;
 
-use Dezer\TinkoffInvestApiClient\Enums\BrokerAccountType;
+use Dezer\TinkoffInvestApiClient\Enums\BrokerAccountTypeEnum;
 
-class Register extends BaseDataTransferObject
+class Register extends BaseSandboxDataTransferObject
 {
-    public BrokerAccountType $brokerAccountType;
+    public BrokerAccountTypeEnum $brokerAccountType;
 }

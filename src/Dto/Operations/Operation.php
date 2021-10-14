@@ -6,6 +6,7 @@ namespace Dezer\TinkoffInvestApiClient\Dto\Operations;
 
 use DateTimeInterface;
 use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
+use Dezer\TinkoffInvestApiClient\Dto\Commission;
 use Dezer\TinkoffInvestApiClient\Enums\CurrencyEnum;
 use Dezer\TinkoffInvestApiClient\Enums\InstrumentTypeEnum;
 use Dezer\TinkoffInvestApiClient\Enums\OperationStatusEnum;

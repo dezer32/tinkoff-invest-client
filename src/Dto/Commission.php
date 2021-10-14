@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Dto\Operations;
+namespace Dezer\TinkoffInvestApiClient\Dto;
 
 use Dezer\TinkoffInvestApiClient\Enums\CurrencyEnum;
 

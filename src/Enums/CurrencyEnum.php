@@ -6,6 +6,11 @@ namespace Dezer\TinkoffInvestApiClient\Enums;
 
 use MyCLabs\Enum\Enum;
 
+/**
+ * @method static self RUB
+ * @method static self EUR
+ * @method static self USD
+ */
 class CurrencyEnum extends Enum
 {
     private const RUB = 'RUB';

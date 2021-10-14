@@ -1,0 +1,31 @@
+{
+  "name": "dezer/tinkoff-invest-api-client",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Dezer\\TinkoffInvestApiClient\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "v.kuzmenko",
+      "email": "mr.vladkuz@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^8.0",
+    "dezer/base-http-client": "^0.0",
+    "roave/security-advisories": "dev-master",
+    "spatie/data-transfer-object": "^3.7",
+    "myclabs/php-enum": "^1.8",
+    "symfony/polyfill": "^1.23"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/dezer32/base-http-client"
+    }
+  ]
+}

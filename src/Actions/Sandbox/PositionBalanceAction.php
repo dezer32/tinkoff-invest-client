@@ -28,7 +28,7 @@ class PositionBalanceAction extends AbstractBaseHttpAction implements BrokerAcco
 
     public function getUri(): string
     {
-        return '/sandbox/positions/balance';
+        return 'sandbox/positions/balance';
     }
 
     public function getOptions(): array

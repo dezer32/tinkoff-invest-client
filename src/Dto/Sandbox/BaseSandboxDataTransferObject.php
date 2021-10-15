@@ -6,6 +6,6 @@ namespace Dezer\TinkoffInvestApiClient\Dto\Sandbox;
 
 use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
 
-class BaseSandboxDataTransferObject extends BaseDataTransferObject
+abstract class BaseSandboxDataTransferObject extends BaseDataTransferObject
 {
 }

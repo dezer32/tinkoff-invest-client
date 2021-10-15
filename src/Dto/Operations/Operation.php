@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Dezer\TinkoffInvestApiClient\Dto\Operations;
 
 use DateTimeInterface;
+use Dezer\TinkoffInvestApiClient\Casters\EnumCaster;
 use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
 use Dezer\TinkoffInvestApiClient\Dto\CurrencyValue;
 use Dezer\TinkoffInvestApiClient\Enums\CurrencyEnum;
@@ -17,20 +18,24 @@ use Spatie\DataTransferObject\Casters\ArrayCaster;
 class Operation extends BaseDataTransferObject
 {
     public string $id;
+    #[CastWith(EnumCaster::class)]
     public OperationStatusEnum $status;
     /** @var Trade[] */
     #[CastWith(ArrayCaster::class, itemType: Trade::class)]
     public array $trades;
     public CurrencyValue $commission;
+    #[CastWith(EnumCaster::class)]
     public CurrencyEnum $currency;
     public float $payment;
     public float $price;
     public int $quantity;
     public int $quantityExecuted;
     public string $figi;
+    #[CastWith(EnumCaster::class)]
     public InstrumentTypeEnum $instrumentType;
     public bool $isMarginCall;
     public DateTimeInterface $date;
+    #[CastWith(EnumCaster::class)]
     public OperationTypeEnum $operationType;
 
     public function getId(): string

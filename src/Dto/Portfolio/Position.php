@@ -4,15 +4,18 @@ declare(strict_types=1);
 
 namespace Dezer\TinkoffInvestApiClient\Dto\Portfolio;
 
+use Dezer\TinkoffInvestApiClient\Casters\EnumCaster;
 use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
 use Dezer\TinkoffInvestApiClient\Dto\CurrencyValue;
 use Dezer\TinkoffInvestApiClient\Enums\InstrumentTypeEnum;
+use Spatie\DataTransferObject\Attributes\CastWith;
 
 class Position extends BaseDataTransferObject
 {
     public string $figi;
     public string $ticker;
     public string $isin;
+    #[CastWith(EnumCaster::class)]
     public InstrumentTypeEnum $instrumentType;
     public float $balance;
     public float $blocked;

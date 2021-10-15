@@ -2,14 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Dto\User;
+namespace Dezer\TinkoffInvestApiClient\Dto\Sandbox;
 
 use Dezer\TinkoffInvestApiClient\Casters\EnumCaster;
-use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
 use Dezer\TinkoffInvestApiClient\Enums\BrokerAccountTypeEnum;
 use Spatie\DataTransferObject\Attributes\CastWith;
 
-class Account extends BaseDataTransferObject
+class RegisterPayload extends BaseSandboxDataTransferObject
 {
     #[CastWith(EnumCaster::class)]
     public BrokerAccountTypeEnum $brokerAccountType;

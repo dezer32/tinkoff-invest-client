@@ -5,12 +5,15 @@ declare(strict_types=1);
 namespace Dezer\TinkoffInvestApiClient\Dto\Market;
 
 use DateTimeInterface;
+use Dezer\TinkoffInvestApiClient\Casters\EnumCaster;
 use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
 use Dezer\TinkoffInvestApiClient\Enums\IntervalEnum;
+use Spatie\DataTransferObject\Attributes\CastWith;
 
 class Candle extends BaseDataTransferObject
 {
     public string $figi;
+    #[CastWith(EnumCaster::class)]
     public IntervalEnum $interval;
     public int $o;
     public int $c;

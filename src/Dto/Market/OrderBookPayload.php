@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Dezer\TinkoffInvestApiClient\Dto\Market;
 
+use Dezer\TinkoffInvestApiClient\Casters\EnumCaster;
 use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
 use Dezer\TinkoffInvestApiClient\Enums\TradeStatusEnum;
 use Spatie\DataTransferObject\Attributes\CastWith;
@@ -19,6 +20,7 @@ class OrderBookPayload extends BaseDataTransferObject
     /** @var Bet[] */
     #[CastWith(ArrayCaster::class, itemType: Bet::class)]
     public array $asks;
+    #[CastWith(EnumCaster::class)]
     public TradeStatusEnum $tradeStatus;
     public float $minPriceIncrement;
     public float $faceValue;

@@ -30,7 +30,7 @@ class CurrencyBalanceAction extends AbstractBaseHttpAction implements BrokerAcco
 
     public function getUri(): string
     {
-        return '/sandbox/currencies/balance';
+        return 'sandbox/currencies/balance';
     }
 
     public function getOptions(): array

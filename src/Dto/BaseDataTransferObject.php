@@ -6,6 +6,6 @@ namespace Dezer\TinkoffInvestApiClient\Dto;
 
 use Spatie\DataTransferObject\DataTransferObject;
 
-class BaseDataTransferObject extends DataTransferObject
+abstract class BaseDataTransferObject extends DataTransferObject
 {
 }

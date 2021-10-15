@@ -19,7 +19,7 @@ class RemoveAction extends AbstractBaseHttpAction implements BrokerAccountIdComp
 
     public function getUri(): string
     {
-        return '/sandbox/remove';
+        return 'sandbox/remove';
     }
 
     public function mapResponse(Response $response): EmptyResponse

@@ -19,7 +19,7 @@ class ClearAction extends AbstractBaseHttpAction implements BrokerAccountIdCompa
 
     public function getUri(): string
     {
-        return '/sandbox/clear';
+        return 'sandbox/clear';
     }
 
     public function mapResponse(Response $response): EmptyResponse

@@ -7,8 +7,8 @@ namespace Dezer\TinkoffInvestApiClient\Actions\Sandbox;
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;
 use Dezer\BaseHttpClient\Exceptions\ResponseException;
 use Dezer\TinkoffInvestApiClient\AbstractBaseHttpAction;
-use Dezer\TinkoffInvestApiClient\Dto\EmptyResponse;
 use Dezer\TinkoffInvestApiClient\Dto\Sandbox\Register as RegisterDto;
+use Dezer\TinkoffInvestApiClient\Dto\Sandbox\RegisterResponse;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\RequestOptions;
 use Spatie\DataTransferObject\Exceptions\UnknownProperties;
@@ -16,7 +16,7 @@ use Spatie\DataTransferObject\Exceptions\UnknownProperties;
 class RegisterAction extends AbstractBaseHttpAction
 {
     public function __construct(
-        private RegisterDto $register
+        private ?RegisterDto $register = null
     ) {
     }
 
@@ -27,13 +27,13 @@ class RegisterAction extends AbstractBaseHttpAction
 
     public function getUri(): string
     {
-        return '/sandbox/register';
+        return 'sandbox/register';
     }
 
     public function getOptions(): array
     {
         return [
-            RequestOptions::JSON => $this->register->toArray(),
+            RequestOptions::JSON => $this->register?->toArray(),
         ];
     }
 
@@ -41,8 +41,8 @@ class RegisterAction extends AbstractBaseHttpAction
      * @throws UnknownProperties
      * @throws ResponseException
      */
-    public function mapResponse(Response $response): EmptyResponse
+    public function mapResponse(Response $response): RegisterResponse
     {
-        return new EmptyResponse($this->getJsonFromResponse($response));
+        return new RegisterResponse($this->getJsonFromResponse($response));
     }
 }

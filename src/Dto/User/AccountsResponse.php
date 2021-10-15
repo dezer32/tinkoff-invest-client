@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Dto\User\Accounts;
+namespace Dezer\TinkoffInvestApiClient\Dto\User;
 
 use Dezer\TinkoffInvestApiClient\Dto\BaseResponse;
 

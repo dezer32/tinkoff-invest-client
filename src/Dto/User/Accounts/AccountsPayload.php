@@ -8,7 +8,7 @@ use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
 use Spatie\DataTransferObject\Attributes\CastWith;
 use Spatie\DataTransferObject\Casters\ArrayCaster;
 
-class Accounts extends BaseDataTransferObject
+class AccountsPayload extends BaseDataTransferObject
 {
     /** @var Account[] */
     #[CastWith(ArrayCaster::class, itemType: Account::class)]

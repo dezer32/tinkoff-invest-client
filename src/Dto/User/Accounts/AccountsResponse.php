@@ -8,9 +8,9 @@ use Dezer\TinkoffInvestApiClient\Dto\BaseResponse;
 
 class AccountsResponse extends BaseResponse
 {
-    public Accounts $payload;
+    public AccountsPayload $payload;
 
-    public function getPayload(): Accounts
+    public function getPayload(): AccountsPayload
     {
         return $this->payload;
     }

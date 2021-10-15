@@ -6,7 +6,7 @@ namespace Dezer\TinkoffInvestApiClient\Dto;
 
 use Dezer\TinkoffInvestApiClient\Enums\CurrencyEnum;
 
-class Commission
+class CurrencyValue extends BaseDataTransferObject
 {
     public CurrencyEnum $currency;
     public float $value;

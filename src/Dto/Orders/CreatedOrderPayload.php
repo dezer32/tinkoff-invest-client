@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Dezer\TinkoffInvestApiClient\Dto\Orders;
 
 use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
-use Dezer\TinkoffInvestApiClient\Dto\Commission;
+use Dezer\TinkoffInvestApiClient\Dto\CurrencyValue;
 use Dezer\TinkoffInvestApiClient\Enums\OperationStatusEnum;
 use Dezer\TinkoffInvestApiClient\Enums\OperationTypeEnum;
 
@@ -18,7 +18,7 @@ class CreatedOrderPayload extends BaseDataTransferObject
     public string $message;
     public int $requestedLots;
     public int $executedLots;
-    public Commission $commission;
+    public CurrencyValue $commission;
 
     public function getOrderId(): string
     {
@@ -55,7 +55,7 @@ class CreatedOrderPayload extends BaseDataTransferObject
         return $this->executedLots;
     }
 
-    public function getCommission(): Commission
+    public function getCommission(): CurrencyValue
     {
         return $this->commission;
     }

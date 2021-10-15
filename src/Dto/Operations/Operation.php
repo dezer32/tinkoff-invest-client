@@ -6,7 +6,7 @@ namespace Dezer\TinkoffInvestApiClient\Dto\Operations;
 
 use DateTimeInterface;
 use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
-use Dezer\TinkoffInvestApiClient\Dto\Commission;
+use Dezer\TinkoffInvestApiClient\Dto\CurrencyValue;
 use Dezer\TinkoffInvestApiClient\Enums\CurrencyEnum;
 use Dezer\TinkoffInvestApiClient\Enums\InstrumentTypeEnum;
 use Dezer\TinkoffInvestApiClient\Enums\OperationStatusEnum;
@@ -21,7 +21,7 @@ class Operation extends BaseDataTransferObject
     /** @var Trade[] */
     #[CastWith(ArrayCaster::class, itemType: Trade::class)]
     public array $trades;
-    public Commission $commission;
+    public CurrencyValue $commission;
     public CurrencyEnum $currency;
     public float $payment;
     public float $price;
@@ -49,7 +49,7 @@ class Operation extends BaseDataTransferObject
         return $this->trades;
     }
 
-    public function getCommission(): Commission
+    public function getCommission(): CurrencyValue
     {
         return $this->commission;
     }

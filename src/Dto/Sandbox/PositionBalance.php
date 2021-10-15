@@ -8,4 +8,14 @@ class PositionBalance extends BaseSandboxDataTransferObject
 {
     public string $figi;
     public float $balance;
+
+    public function getFigi(): string
+    {
+        return $this->figi;
+    }
+
+    public function getBalance(): float
+    {
+        return $this->balance;
+    }
 }

@@ -23,4 +23,11 @@ class SandboxPositionBalanceActionFeatureTest extends AbstractFeatureTest
         self::assertTrue($response->getStatus()->equals(ResponseStatusCodeEnum::OK()));
         self::assertEmpty($response->getPayload());
     }
+
+    protected function setUp(): void
+    {
+        $this->markTestSkipped('Не производить действий с аккаунтом в песках без острой необходимости.');
+
+        parent::setUp();
+    }
 }

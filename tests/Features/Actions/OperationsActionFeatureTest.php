@@ -19,8 +19,6 @@ use Dezer\TinkoffInvestApiClient\Tests\Features\AbstractFeatureTest;
 
 class OperationsActionFeatureTest extends AbstractFeatureTest
 {
-    private ?RegisterResponse $registeredAccount = null;
-
     public function testSuccessCanGetOperations(): void
     {
         $operationCondition = new OperationsCondition([
@@ -35,34 +33,5 @@ class OperationsActionFeatureTest extends AbstractFeatureTest
         $response = $this->client->perform($action);
 
         self::assertTrue($response->getStatus()->equals(ResponseStatusCodeEnum::OK()));
-    }
-
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $accountsAction = new GetUserAccountsAction();
-        /** @var AccountsResponse $accounts */
-        $accounts = $this->client->perform($accountsAction);
-        if (!empty($accounts->getPayload()->getAccounts())) {
-            $this->client->setBrokerAccountId(
-                new BrokerAccountId($accounts->getPayload()->getAccounts()[0]->getBrokerAccountId())
-            );
-        } else {
-            $registerAction = new RegisterAccountAction();
-            $this->registeredAccount = $this->client->perform($registerAction);
-            $this->client->setBrokerAccountId(
-                new BrokerAccountId($this->registeredAccount->getPayload()->getBrokerAccountId())
-            );
-        }
-    }
-
-    protected function tearDown(): void
-    {
-        if ($this->registeredAccount !== null) {
-            $this->client->perform(new RemoveAccountAction());
-        }
-
-        parent::tearDown();
     }
 }

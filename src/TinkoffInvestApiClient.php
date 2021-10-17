@@ -37,7 +37,7 @@ class TinkoffInvestApiClient extends ApiClient
         return parent::perform($action);
     }
 
-    public function getBrokerAccountId(): ?BrokerAccountId
+    protected function getBrokerAccountId(): ?BrokerAccountId
     {
         return $this->brokerAccountId;
     }

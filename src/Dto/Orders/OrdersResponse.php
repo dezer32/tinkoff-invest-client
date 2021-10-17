@@ -6,11 +6,11 @@ namespace Dezer\TinkoffInvestApiClient\Dto\Orders;
 
 use Dezer\TinkoffInvestApiClient\Dto\BaseResponse;
 
-class CancelResponse extends BaseResponse
+class OrdersResponse extends BaseResponse
 {
-    public CancelPayload $payload;
+    public OrdersPayload $payload;
 
-    public function getPayload(): CancelPayload
+    public function getPayload(): OrdersPayload
     {
         return $this->payload;
     }

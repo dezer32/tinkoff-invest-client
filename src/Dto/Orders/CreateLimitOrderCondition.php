@@ -9,7 +9,7 @@ use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
 use Dezer\TinkoffInvestApiClient\Enums\OperationTypeEnum;
 use Spatie\DataTransferObject\Attributes\CastWith;
 
-class LimitOrder extends BaseDataTransferObject
+class CreateLimitOrderCondition extends BaseDataTransferObject
 {
     public string $figi;
     public int $lots;

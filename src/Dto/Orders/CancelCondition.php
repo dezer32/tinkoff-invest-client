@@ -6,7 +6,7 @@ namespace Dezer\TinkoffInvestApiClient\Dto\Orders;
 
 use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
 
-class CancelPayload extends BaseDataTransferObject
+class CancelCondition extends BaseDataTransferObject
 {
     public string $orderId;
 

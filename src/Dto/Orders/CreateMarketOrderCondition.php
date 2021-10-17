@@ -9,7 +9,7 @@ use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
 use Dezer\TinkoffInvestApiClient\Enums\OperationTypeEnum;
 use Spatie\DataTransferObject\Attributes\CastWith;
 
-class MarketOrder extends BaseDataTransferObject
+class CreateMarketOrderCondition extends BaseDataTransferObject
 {
     public string $figi;
     public int $lots;

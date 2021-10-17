@@ -2,20 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Tests\Features\Actions;
+namespace Dezer\TinkoffInvestApiClient\Tests\Features\Actions\Sandbox;
 
-use Dezer\TinkoffInvestApiClient\Actions\Sandbox\PositionBalanceAction;
+use Dezer\TinkoffInvestApiClient\Actions\Sandbox\ClearAction;
 use Dezer\TinkoffInvestApiClient\Dto\EmptyResponse;
-use Dezer\TinkoffInvestApiClient\Dto\Sandbox\PositionBalance;
 use Dezer\TinkoffInvestApiClient\Enums\ResponseStatusCodeEnum;
 use Dezer\TinkoffInvestApiClient\Tests\Features\AbstractFeatureTest;
 
-class SandboxPositionBalanceActionFeatureTest extends AbstractFeatureTest
+class SandboxClearActionFeatureTest extends AbstractFeatureTest
 {
-    public function testSuccessCanSetPositionBalance(): void
+    public function testSuccessCanClear(): void
     {
-        $dto = new PositionBalance(['BBG000B9XRY4', 500]);
-        $action = new PositionBalanceAction($dto);
+        $action = new ClearAction();
 
         /** @var EmptyResponse $response */
         $response = $this->client->perform($action);

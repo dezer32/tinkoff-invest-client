@@ -4,21 +4,20 @@ declare(strict_types=1);
 
 namespace Dezer\TinkoffInvestApiClient\Tests\Features\Actions;
 
-use Dezer\TinkoffInvestApiClient\Actions\Sandbox\ClearAction;
-use Dezer\TinkoffInvestApiClient\Dto\EmptyResponse;
+use Dezer\TinkoffInvestApiClient\Actions\UserAccountsAction;
+use Dezer\TinkoffInvestApiClient\Dto\User\AccountsResponse;
 use Dezer\TinkoffInvestApiClient\Enums\ResponseStatusCodeEnum;
 use Dezer\TinkoffInvestApiClient\Tests\Features\AbstractFeatureTest;
 
-class SandboxClearActionFeatureTest extends AbstractFeatureTest
+class UserAccountsActionFeatureTest extends AbstractFeatureTest
 {
-    public function testSuccessCanClear(): void
+    public function testSuccessCanGetUserActions(): void
     {
-        $action = new ClearAction();
+        $action = new UserAccountsAction();
 
-        /** @var EmptyResponse $response */
+        /** @var AccountsResponse $response */
         $response = $this->client->perform($action);
 
         self::assertTrue($response->getStatus()->equals(ResponseStatusCodeEnum::OK()));
-        self::assertEmpty($response->getPayload());
     }
 }

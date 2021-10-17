@@ -20,7 +20,7 @@ class SandboxRemoveActionFeatureTest extends AbstractFeatureTest
 
         $response = $this->client->perform($action);
 
+        self::assertTrue($response->getStatus()->equals(ResponseStatusCodeEnum::OK()));
         self::assertEmpty($response->getPayload());
-        self::assertTrue(ResponseStatusCodeEnum::OK()->equals($response->getStatus()));
     }
 }

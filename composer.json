@@ -25,7 +25,8 @@
     "roave/security-advisories": "dev-master",
     "spatie/data-transfer-object": "^3.7",
     "myclabs/php-enum": "^1.8",
-    "symfony/polyfill": "^1.23"
+    "symfony/polyfill": "^1.23",
+    "nesbot/carbon": "^2.53"
   },
   "repositories": [
     {

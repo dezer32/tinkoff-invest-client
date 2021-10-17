@@ -26,20 +26,22 @@ class TinkoffInvestApiClient extends ApiClient
     public function perform(HttpActionInterface $action)
     {
         if (
-            null !== $this->getBrokerAccountId()
+            null !== $this->brokerAccountId
             && is_a($action, BrokerAccountIdCompatible::class)
         ) {
             $action->setExtraOptions([
-                RequestOptions::QUERY => $this->getBrokerAccountId()->toArray()
+                RequestOptions::QUERY => $this->brokerAccountId->toArray()
             ]);
         }
 
         return parent::perform($action);
     }
 
-    protected function getBrokerAccountId(): ?BrokerAccountId
+    public function setBrokerAccountId(?BrokerAccountId $brokerAccountId): self
     {
-        return $this->brokerAccountId;
+        $this->brokerAccountId = $brokerAccountId;
+
+        return $this;
     }
 
     protected function getBaseHeaders(): array

@@ -10,7 +10,7 @@ use Dezer\TinkoffInvestApiClient\Contracts\BrokerAccountIdCompatible;
 use Dezer\TinkoffInvestApiClient\Dto\Portfolio\CurrenciesResponse;
 use GuzzleHttp\Psr7\Response;
 
-class PortfolioCurrenciesAction extends AbstractBaseHttpAction implements BrokerAccountIdCompatible
+class GetPortfolioCurrenciesAction extends AbstractBaseHttpAction implements BrokerAccountIdCompatible
 {
     public function getMethod(): string
     {

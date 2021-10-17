@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace Dezer\TinkoffInvestApiClient\Tests\Features\Actions;
 
 use Carbon\Carbon;
-use Dezer\TinkoffInvestApiClient\Actions\OperationsAction;
-use Dezer\TinkoffInvestApiClient\Actions\Sandbox\RegisterAction;
-use Dezer\TinkoffInvestApiClient\Actions\Sandbox\RemoveAction;
-use Dezer\TinkoffInvestApiClient\Actions\UserAccountsAction;
+use Dezer\TinkoffInvestApiClient\Actions\GetOperationsAction;
+use Dezer\TinkoffInvestApiClient\Actions\Sandbox\RegisterAccountAction;
+use Dezer\TinkoffInvestApiClient\Actions\Sandbox\RemoveAccountAction;
+use Dezer\TinkoffInvestApiClient\Actions\GetUserAccountsAction;
 use Dezer\TinkoffInvestApiClient\Dto\BrokerAccountId;
 use Dezer\TinkoffInvestApiClient\Dto\Operations\OperationsCondition;
 use Dezer\TinkoffInvestApiClient\Dto\Operations\OperationsResponse;
@@ -29,7 +29,7 @@ class OperationsActionFeatureTest extends AbstractFeatureTest
 
         ]);
 
-        $action = new OperationsAction($operationCondition);
+        $action = new GetOperationsAction($operationCondition);
 
         /** @var OperationsResponse $response */
         $response = $this->client->perform($action);
@@ -41,7 +41,7 @@ class OperationsActionFeatureTest extends AbstractFeatureTest
     {
         parent::setUp();
 
-        $accountsAction = new UserAccountsAction();
+        $accountsAction = new GetUserAccountsAction();
         /** @var AccountsResponse $accounts */
         $accounts = $this->client->perform($accountsAction);
         if (!empty($accounts->getPayload()->getAccounts())) {
@@ -49,7 +49,7 @@ class OperationsActionFeatureTest extends AbstractFeatureTest
                 new BrokerAccountId($accounts->getPayload()->getAccounts()[0]->getBrokerAccountId())
             );
         } else {
-            $registerAction = new RegisterAction();
+            $registerAction = new RegisterAccountAction();
             $this->registeredAccount = $this->client->perform($registerAction);
             $this->client->setBrokerAccountId(
                 new BrokerAccountId($this->registeredAccount->getPayload()->getBrokerAccountId())
@@ -60,7 +60,7 @@ class OperationsActionFeatureTest extends AbstractFeatureTest
     protected function tearDown(): void
     {
         if ($this->registeredAccount !== null) {
-            $this->client->perform(new RemoveAction());
+            $this->client->perform(new RemoveAccountAction());
         }
 
         parent::tearDown();

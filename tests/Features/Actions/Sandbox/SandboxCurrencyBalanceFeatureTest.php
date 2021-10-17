@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Dezer\TinkoffInvestApiClient\Tests\Features\Actions\Sandbox;
 
-use Dezer\TinkoffInvestApiClient\Actions\Sandbox\CurrencyBalanceAction;
+use Dezer\TinkoffInvestApiClient\Actions\Sandbox\SetCurrencyBalanceAction;
 use Dezer\TinkoffInvestApiClient\Dto\EmptyResponse;
 use Dezer\TinkoffInvestApiClient\Dto\Sandbox\CurrencyBalance;
 use Dezer\TinkoffInvestApiClient\Enums\CurrencyEnum;
@@ -16,7 +16,7 @@ class SandboxCurrencyBalanceFeatureTest extends AbstractFeatureTest
     public function testSuccessCanSetBalance(): void
     {
         $dto = new CurrencyBalance([CurrencyEnum::RUB(), 500]);
-        $action = new CurrencyBalanceAction($dto);
+        $action = new SetCurrencyBalanceAction($dto);
 
         /** @var EmptyResponse $response */
         $response = $this->client->perform($action);

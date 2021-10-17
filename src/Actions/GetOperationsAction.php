@@ -12,7 +12,7 @@ use Dezer\TinkoffInvestApiClient\Dto\Operations\OperationsResponse;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\RequestOptions;
 
-class OperationsAction extends AbstractBaseHttpAction implements BrokerAccountIdCompatible
+class GetOperationsAction extends AbstractBaseHttpAction implements BrokerAccountIdCompatible
 {
     private OperationsCondition $operationsCondition;
 

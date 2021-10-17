@@ -9,7 +9,7 @@ use Dezer\TinkoffInvestApiClient\AbstractBaseHttpAction;
 use Dezer\TinkoffInvestApiClient\Dto\User\AccountsResponse;
 use GuzzleHttp\Psr7\Response;
 
-class UserAccountsAction extends AbstractBaseHttpAction
+class GetUserAccountsAction extends AbstractBaseHttpAction
 {
     public function getMethod(): string
     {

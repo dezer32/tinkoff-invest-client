@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Dezer\TinkoffInvestApiClient\Tests\Features\Actions\Sandbox;
 
-use Dezer\TinkoffInvestApiClient\Actions\Sandbox\RegisterAction;
-use Dezer\TinkoffInvestApiClient\Actions\Sandbox\RemoveAction;
+use Dezer\TinkoffInvestApiClient\Actions\Sandbox\RegisterAccountAction;
+use Dezer\TinkoffInvestApiClient\Actions\Sandbox\RemoveAccountAction;
 use Dezer\TinkoffInvestApiClient\Enums\ResponseStatusCodeEnum;
 use Dezer\TinkoffInvestApiClient\Tests\Features\AbstractFeatureTest;
 
@@ -13,10 +13,10 @@ class SandboxRemoveActionFeatureTest extends AbstractFeatureTest
 {
     public function testSuccessCanRemove(): void
     {
-        $action = new RegisterAction();
+        $action = new RegisterAccountAction();
         $this->client->perform($action);
 
-        $action = new RemoveAction();
+        $action = new RemoveAccountAction();
 
         $response = $this->client->perform($action);
 

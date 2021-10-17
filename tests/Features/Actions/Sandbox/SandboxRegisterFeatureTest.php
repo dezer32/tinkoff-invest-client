@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Dezer\TinkoffInvestApiClient\Tests\Features\Actions\Sandbox;
 
-use Dezer\TinkoffInvestApiClient\Actions\Sandbox\RegisterAction;
-use Dezer\TinkoffInvestApiClient\Actions\Sandbox\RemoveAction;
+use Dezer\TinkoffInvestApiClient\Actions\Sandbox\RegisterAccountAction;
+use Dezer\TinkoffInvestApiClient\Actions\Sandbox\RemoveAccountAction;
 use Dezer\TinkoffInvestApiClient\Dto\BrokerAccountId;
 use Dezer\TinkoffInvestApiClient\Dto\Sandbox\RegisterResponse;
 use Dezer\TinkoffInvestApiClient\Enums\BrokerAccountTypeEnum;
@@ -18,7 +18,7 @@ class SandboxRegisterFeatureTest extends AbstractFeatureTest
 
     public function testSuccessCanRegisterAccount(): void
     {
-        $action = new RegisterAction();
+        $action = new RegisterAccountAction();
 
         /** @var RegisterResponse $response */
         $this->response = $this->client->perform($action);
@@ -35,7 +35,7 @@ class SandboxRegisterFeatureTest extends AbstractFeatureTest
         $brokerAccountId = new BrokerAccountId([$this->response->getPayload()->getBrokerAccountId()]);
 
         $this->client->setBrokerAccountId($brokerAccountId);
-        $this->client->perform(new RemoveAction());
+        $this->client->perform(new RemoveAccountAction());
 
         parent::tearDown();
     }

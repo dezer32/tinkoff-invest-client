@@ -10,7 +10,7 @@ use Dezer\TinkoffInvestApiClient\Contracts\BrokerAccountIdCompatible;
 use Dezer\TinkoffInvestApiClient\Dto\EmptyResponse;
 use GuzzleHttp\Psr7\Response;
 
-class ClearAction extends AbstractBaseHttpAction implements BrokerAccountIdCompatible
+class RemoveAccountAction extends AbstractBaseHttpAction implements BrokerAccountIdCompatible
 {
     public function getMethod(): string
     {
@@ -19,7 +19,7 @@ class ClearAction extends AbstractBaseHttpAction implements BrokerAccountIdCompa
 
     public function getUri(): string
     {
-        return 'sandbox/clear';
+        return 'sandbox/remove';
     }
 
     public function mapResponse(Response $response): EmptyResponse

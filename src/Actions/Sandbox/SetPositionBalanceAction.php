@@ -12,7 +12,7 @@ use Dezer\TinkoffInvestApiClient\Dto\Sandbox\PositionBalance;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\RequestOptions;
 
-class PositionBalanceAction extends AbstractBaseHttpAction implements BrokerAccountIdCompatible
+class SetPositionBalanceAction extends AbstractBaseHttpAction implements BrokerAccountIdCompatible
 {
     private PositionBalance $positionBalance;
 

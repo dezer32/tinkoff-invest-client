@@ -7,20 +7,17 @@ namespace Dezer\TinkoffInvestApiClient\Actions\Sandbox;
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;
 use Dezer\BaseHttpClient\Exceptions\ResponseException;
 use Dezer\TinkoffInvestApiClient\AbstractBaseHttpAction;
-use Dezer\TinkoffInvestApiClient\Contracts\BrokerAccountIdCompatible;
-use Dezer\TinkoffInvestApiClient\Dto\EmptyResponse;
-use Dezer\TinkoffInvestApiClient\Dto\Sandbox\CurrencyBalance;
+use Dezer\TinkoffInvestApiClient\Dto\Sandbox\Register as RegisterDto;
+use Dezer\TinkoffInvestApiClient\Dto\Sandbox\RegisterResponse;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\RequestOptions;
 use Spatie\DataTransferObject\Exceptions\UnknownProperties;
 
-class CurrencyBalanceAction extends AbstractBaseHttpAction implements BrokerAccountIdCompatible
+class RegisterAccountAction extends AbstractBaseHttpAction
 {
-    private CurrencyBalance $currencyBalance;
-
-    public function __construct(CurrencyBalance $currencyBalance)
-    {
-        $this->currencyBalance = $currencyBalance;
+    public function __construct(
+        private ?RegisterDto $register = null
+    ) {
     }
 
     public function getMethod(): string
@@ -30,13 +27,13 @@ class CurrencyBalanceAction extends AbstractBaseHttpAction implements BrokerAcco
 
     public function getUri(): string
     {
-        return 'sandbox/currencies/balance';
+        return 'sandbox/register';
     }
 
     public function getOptions(): array
     {
         return [
-            RequestOptions::JSON => $this->currencyBalance->toArray(),
+            RequestOptions::JSON => $this->register?->toArray(),
         ];
     }
 
@@ -44,8 +41,8 @@ class CurrencyBalanceAction extends AbstractBaseHttpAction implements BrokerAcco
      * @throws UnknownProperties
      * @throws ResponseException
      */
-    public function mapResponse(Response $response): EmptyResponse
+    public function mapResponse(Response $response): RegisterResponse
     {
-        return new EmptyResponse($this->getJsonFromResponse($response));
+        return new RegisterResponse($this->getJsonFromResponse($response));
     }
 }

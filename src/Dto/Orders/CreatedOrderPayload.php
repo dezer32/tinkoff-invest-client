@@ -9,22 +9,23 @@ use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
 use Dezer\TinkoffInvestApiClient\Dto\CurrencyValue;
 use Dezer\TinkoffInvestApiClient\Enums\OperationStatusEnum;
 use Dezer\TinkoffInvestApiClient\Enums\OperationTypeEnum;
+use Ramsey\Uuid\UuidInterface;
 use Spatie\DataTransferObject\Attributes\CastWith;
 
 class CreatedOrderPayload extends BaseDataTransferObject
 {
-    public string $orderId;
+    public UuidInterface $orderId;
     #[CastWith(EnumCaster::class)]
     public OperationTypeEnum $operation;
     #[CastWith(EnumCaster::class)]
     public OperationStatusEnum $status;
-    public string $rejectReason;
-    public string $message;
+    public ?string $rejectReason;
+    public ?string $message;
     public int $requestedLots;
     public int $executedLots;
-    public CurrencyValue $commission;
+    public ?CurrencyValue $commission;
 
-    public function getOrderId(): string
+    public function getOrderId(): UuidInterface
     {
         return $this->orderId;
     }

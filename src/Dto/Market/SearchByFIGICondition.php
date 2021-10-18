@@ -6,7 +6,7 @@ namespace Dezer\TinkoffInvestApiClient\Dto\Market;
 
 use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
 
-class SearchByFigiCondition extends BaseDataTransferObject
+class SearchByFIGICondition extends BaseDataTransferObject
 {
     public string $figi;
 

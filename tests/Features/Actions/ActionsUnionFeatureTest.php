@@ -5,9 +5,11 @@ declare(strict_types=1);
 namespace Dezer\TinkoffInvestApiClient\Tests\Features\Actions;
 
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;
-use Dezer\TinkoffInvestApiClient\Actions\GetOperationsAction;
+use Dezer\TinkoffInvestApiClient\Actions\Market\GetBondsAction;
+use Dezer\TinkoffInvestApiClient\Actions\Market\GetCurrenciesAction;
+use Dezer\TinkoffInvestApiClient\Actions\Market\GetETFsAction;
+use Dezer\TinkoffInvestApiClient\Actions\Market\GetStocksAction;
 use Dezer\TinkoffInvestApiClient\Dto\BaseResponse;
-use Dezer\TinkoffInvestApiClient\Dto\Operations\OperationsCondition;
 use Dezer\TinkoffInvestApiClient\Enums\ResponseStatusCodeEnum;
 use Dezer\TinkoffInvestApiClient\Tests\Features\AbstractFeatureTest;
 
@@ -48,6 +50,19 @@ class ActionsUnionFeatureTest extends AbstractFeatureTest
 //            [
 //                GetPortfolioCurrenciesAction::class,
 //            ],
+            [
+                GetStocksAction::class,
+            ],
+            [
+                GetBondsAction::class,
+            ],
+            [
+                GetETFsAction::class,
+            ],
+            [
+                GetCurrenciesAction::class,
+            ],
+
 //            [
 //                GetOperationsAction::class,
 //                OperationsCondition::class,

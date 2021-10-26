@@ -14,10 +14,10 @@ class Instrument extends BaseDataTransferObject
 {
     public string $figi;
     public string $ticker;
-    public string $isin;
-    public float $minPriceIncrement;
+    public ?string $isin;
+    public ?float $minPriceIncrement;
     public int $lot;
-    public string $minQuantity;
+    public ?int $minQuantity;
     #[CastWith(EnumCaster::class)]
     public CurrencyEnum $currency;
     public string $name;
@@ -34,12 +34,12 @@ class Instrument extends BaseDataTransferObject
         return $this->ticker;
     }
 
-    public function getIsin(): string
+    public function getIsin(): ?string
     {
         return $this->isin;
     }
 
-    public function getMinPriceIncrement(): float
+    public function getMinPriceIncrement(): ?float
     {
         return $this->minPriceIncrement;
     }
@@ -49,7 +49,7 @@ class Instrument extends BaseDataTransferObject
         return $this->lot;
     }
 
-    public function getMinQuantity(): string
+    public function getMinQuantity(): ?int
     {
         return $this->minQuantity;
     }

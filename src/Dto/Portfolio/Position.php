@@ -14,15 +14,15 @@ class Position extends BaseDataTransferObject
 {
     public string $figi;
     public string $ticker;
-    public string $isin;
+    public ?string $isin;
     #[CastWith(EnumCaster::class)]
     public InstrumentTypeEnum $instrumentType;
     public float $balance;
     public float $blocked;
-    public CurrencyValue $expectedYield;
+    public ?CurrencyValue $expectedYield;
     public int $lots;
-    public CurrencyValue $averagePositionPrice;
-    public CurrencyValue $averagePositionPriceNoNkd;
+    public ?CurrencyValue $averagePositionPrice;
+    public ?CurrencyValue $averagePositionPriceNoNkd;
     public string $name;
 
     public function getFigi(): string
@@ -35,7 +35,7 @@ class Position extends BaseDataTransferObject
         return $this->ticker;
     }
 
-    public function getIsin(): string
+    public function getIsin(): ?string
     {
         return $this->isin;
     }
@@ -55,7 +55,7 @@ class Position extends BaseDataTransferObject
         return $this->blocked;
     }
 
-    public function getExpectedYield(): CurrencyValue
+    public function getExpectedYield(): ?CurrencyValue
     {
         return $this->expectedYield;
     }
@@ -65,12 +65,12 @@ class Position extends BaseDataTransferObject
         return $this->lots;
     }
 
-    public function getAveragePositionPrice(): CurrencyValue
+    public function getAveragePositionPrice(): ?CurrencyValue
     {
         return $this->averagePositionPrice;
     }
 
-    public function getAveragePositionPriceNoNkd(): CurrencyValue
+    public function getAveragePositionPriceNoNkd(): ?CurrencyValue
     {
         return $this->averagePositionPriceNoNkd;
     }

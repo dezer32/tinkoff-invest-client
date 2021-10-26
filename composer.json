@@ -26,7 +26,6 @@
     "spatie/data-transfer-object": "^3.7",
     "myclabs/php-enum": "^1.8",
     "symfony/polyfill": "^1.23",
-    "nesbot/carbon": "^2.53",
     "ramsey/uuid": "^4.2"
   },
   "repositories": [

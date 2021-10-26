@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Dezer\TinkoffInvestApiClient\Casters;
 
-use Carbon\Carbon;
+use DateTime;
 use DateTimeInterface;
 use Spatie\DataTransferObject\Caster;
 
@@ -16,6 +16,6 @@ class DateTimeInterfaceCaster implements Caster
             return $value;
         }
 
-        return Carbon::parse($value);
+        return new DateTime($value);
     }
 }

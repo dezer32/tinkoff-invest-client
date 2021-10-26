@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Dezer\TinkoffInvestApiClient\Dto;
 
+use DateTimeInterface;
+use Dezer\TinkoffInvestApiClient\Casters\DateTimeInterfaceCaster;
 use Dezer\TinkoffInvestApiClient\Casters\UuidCaster;
 use MyCLabs\Enum\Enum;
 use Ramsey\Uuid\UuidInterface;
@@ -11,6 +13,7 @@ use Spatie\DataTransferObject\Attributes\DefaultCast;
 use Spatie\DataTransferObject\DataTransferObject;
 
 #[DefaultCast(UuidInterface::class, UuidCaster::class)]
+#[DefaultCast(DateTimeInterface::class, DateTimeInterfaceCaster::class)]
 abstract class BaseDataTransferObject extends DataTransferObject
 {
     public function toArray(): array
@@ -18,8 +21,8 @@ abstract class BaseDataTransferObject extends DataTransferObject
         $array = parent::toArray();
 
         array_walk_recursive($array, static function (mixed &$item): mixed {
-            if (is_subclass_of($item, \DateTimeInterface::class)) {
-                $item = $item->format(\DateTimeInterface::ATOM);
+            if (is_subclass_of($item, DateTimeInterface::class)) {
+                $item = $item->format(DateTimeInterface::ATOM);
             }
 
             if (is_subclass_of($item, Enum::class)) {

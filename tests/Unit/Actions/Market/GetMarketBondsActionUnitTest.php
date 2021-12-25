@@ -1,20 +1,21 @@
 <?php
 
-namespace Dezer\TinkoffInvestApiClient\Tests\Unit\Actions;
+namespace Dezer\TinkoffInvestApiClient\Tests\Unit\Actions\Market;
 
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;
-use Dezer\TinkoffInvestApiClient\Actions\GetUserAccountsAction;
+use Dezer\TinkoffInvestApiClient\Actions\Market\GetBondsAction;
 use Dezer\TinkoffInvestApiClient\Contracts\BrokerAccountIdCompatible;
 use Dezer\TinkoffInvestApiClient\Tests\Unit\AbstractUnitTest;
 
-class GetUserAccountsActionUnitTest extends AbstractUnitTest
+class GetMarketBondsActionUnitTest extends AbstractUnitTest
 {
-    public function testSuccessCanMakeGetUserAccountsAction(): void
+    public function testSuccessCanMakeGetMarketBonds(): void
     {
-        $action = new GetUserAccountsAction();
+        $action = new GetBondsAction();
 
         self::assertSame(HttpActionInterface::GET, $action->getMethod());
-        self::assertSame('user/accounts', $action->getUri());
+        self::assertSame('market/bonds', $action->getUri());
+
         self::assertEmpty($action->getOptions());
         self::assertEmpty($action->getExtraOptions());
 

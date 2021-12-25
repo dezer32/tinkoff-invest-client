@@ -6,5 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 abstract class AbstractUnitTest extends TestCase
 {
-    protected const FIGI = 'BBG000B9XRY4';
+    protected const FIGI = 'TEST_FIGI';
+
+    protected const TICKER = 'TEST_TICKER';
 }

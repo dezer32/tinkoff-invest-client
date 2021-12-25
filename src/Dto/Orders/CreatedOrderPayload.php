@@ -19,11 +19,11 @@ class CreatedOrderPayload extends BaseDataTransferObject
     public OperationTypeEnum $operation;
     #[CastWith(EnumCaster::class)]
     public OperationStatusEnum $status;
-    public ?string $rejectReason;
-    public ?string $message;
+    public string $rejectReason;
+    public string $message;
     public int $requestedLots;
     public int $executedLots;
-    public ?CurrencyValue $commission;
+    public CurrencyValue $commission;
 
     public function getOrderId(): UuidInterface
     {

@@ -6,7 +6,6 @@ namespace Dezer\TinkoffInvestApiClient\Tests\Features\Actions\Sandbox;
 
 use Dezer\TinkoffInvestApiClient\Actions\Sandbox\RegisterAccountAction;
 use Dezer\TinkoffInvestApiClient\Actions\Sandbox\RemoveAccountAction;
-use Dezer\TinkoffInvestApiClient\Dto\Sandbox\Register;
 use Dezer\TinkoffInvestApiClient\Dto\Sandbox\RegisterResponse;
 use Dezer\TinkoffInvestApiClient\Enums\BrokerAccountTypeEnum;
 use Dezer\TinkoffInvestApiClient\Enums\ResponseStatusCodeEnum;

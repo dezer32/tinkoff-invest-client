@@ -13,5 +13,6 @@ use MyCLabs\Enum\Enum;
 class BrokerAccountTypeEnum extends Enum
 {
     private const TINKOFF = 'Tinkoff';
+
     private const TEST_ACCOUNT = 'Test account';
 }

@@ -45,7 +45,7 @@ abstract class AbstractBaseHttpAction extends BaseHttpAction
      */
     protected function getJsonFromResponse(Response $response): array
     {
-        $content = (string) $response->getBody();
+        $content = (string)$response->getBody();
 
         try {
             return json_decode($content, true, 512, JSON_THROW_ON_ERROR);

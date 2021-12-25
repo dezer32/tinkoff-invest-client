@@ -22,14 +22,14 @@ class Operation extends BaseDataTransferObject
     public OperationStatusEnum $status;
     /** @var ?Trade[] */
     #[CastWith(ArrayCaster::class, itemType: Trade::class)]
-    public ?array $trades;
-    public ?CurrencyValue $commission;
+    public array $trades;
+    public CurrencyValue $commission;
     #[CastWith(EnumCaster::class)]
     public CurrencyEnum $currency;
     public float $payment;
     public float $price;
     public int $quantity;
-    public ?int $quantityExecuted;
+    public int $quantityExecuted;
     public string $figi;
     #[CastWith(EnumCaster::class)]
     public InstrumentTypeEnum $instrumentType;
@@ -53,7 +53,7 @@ class Operation extends BaseDataTransferObject
         return $this->trades;
     }
 
-    public function getCommission(): ?CurrencyValue
+    public function getCommission(): CurrencyValue
     {
         return $this->commission;
     }
@@ -78,7 +78,7 @@ class Operation extends BaseDataTransferObject
         return $this->quantity;
     }
 
-    public function getQuantityExecuted(): ?int
+    public function getQuantityExecuted(): int
     {
         return $this->quantityExecuted;
     }

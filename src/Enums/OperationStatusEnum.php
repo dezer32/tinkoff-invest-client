@@ -14,6 +14,8 @@ use MyCLabs\Enum\Enum;
 class OperationStatusEnum extends Enum
 {
     private const NEW = 'New';
+
     private const DONE = 'Done';
+
     private const FILL = 'Fill';
 }

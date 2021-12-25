@@ -10,14 +10,13 @@ use Dezer\TinkoffInvestApiClient\Enums\CurrencyEnum;
 use Dezer\TinkoffInvestApiClient\Enums\InstrumentTypeEnum;
 use Spatie\DataTransferObject\Attributes\CastWith;
 
-class Instrument extends BaseDataTransferObject
+class InstrumentByFIGI extends BaseDataTransferObject
 {
     public string $figi;
     public string $ticker;
     public string $isin;
     public float $minPriceIncrement;
     public int $lot;
-    public int $minQuantity;
     #[CastWith(EnumCaster::class)]
     public CurrencyEnum $currency;
     public string $name;
@@ -47,11 +46,6 @@ class Instrument extends BaseDataTransferObject
     public function getLot(): int
     {
         return $this->lot;
-    }
-
-    public function getMinQuantity(): int
-    {
-        return $this->minQuantity;
     }
 
     public function getCurrency(): CurrencyEnum

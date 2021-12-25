@@ -13,7 +13,10 @@ use MyCLabs\Enum\Enum;
 class InstrumentTypeEnum extends Enum
 {
     private const STOCK = 'Stock';
+
     private const CURRENCY = 'Currency';
+
     private const BOND = 'Bond';
+
     private const ETF = 'Etf';
 }

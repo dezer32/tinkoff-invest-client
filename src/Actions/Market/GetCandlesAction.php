@@ -27,7 +27,7 @@ class GetCandlesAction extends AbstractBaseHttpAction
 
     public function getUri(): string
     {
-        return 'market/bonds';
+        return 'market/candles';
     }
 
     public function getOptions(): array

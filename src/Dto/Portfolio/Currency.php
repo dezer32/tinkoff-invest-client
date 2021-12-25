@@ -14,7 +14,7 @@ class Currency extends BaseDataTransferObject
     #[CastWith(EnumCaster::class)]
     public CurrencyEnum $currency;
     public float $balance;
-    public ?float $blocked;
+    public float $blocked;
 
     public function getCurrency(): CurrencyEnum
     {

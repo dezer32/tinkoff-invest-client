@@ -6,7 +6,6 @@ namespace Dezer\TinkoffInvestApiClient\Dto\Portfolio;
 
 use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
 use Spatie\DataTransferObject\Attributes\CastWith;
-use Spatie\DataTransferObject\Attributes\MapFrom;
 use Spatie\DataTransferObject\Casters\ArrayCaster;
 
 class CurrenciesPayload extends BaseDataTransferObject

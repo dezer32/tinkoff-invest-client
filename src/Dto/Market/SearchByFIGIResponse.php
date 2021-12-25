@@ -8,9 +8,9 @@ use Dezer\TinkoffInvestApiClient\Dto\BaseResponse;
 
 class SearchByFIGIResponse extends BaseResponse
 {
-    public Instrument $payload;
+    public InstrumentByFIGI $payload;
 
-    public function getPayload(): Instrument
+    public function getPayload(): InstrumentByFIGI
     {
         return $this->payload;
     }

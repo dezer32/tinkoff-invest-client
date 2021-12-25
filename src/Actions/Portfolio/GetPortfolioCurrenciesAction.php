@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Actions;
+namespace Dezer\TinkoffInvestApiClient\Actions\Portfolio;
 
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;
 use Dezer\TinkoffInvestApiClient\AbstractBaseHttpAction;

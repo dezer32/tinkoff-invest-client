@@ -3,7 +3,7 @@
 namespace Dezer\TinkoffInvestApiClient\Tests\Unit\Actions\Portfolio;
 
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;
-use Dezer\TinkoffInvestApiClient\Actions\GetPortfolioAction;
+use Dezer\TinkoffInvestApiClient\Actions\Portfolio\GetPortfolioAction;
 use Dezer\TinkoffInvestApiClient\Contracts\BrokerAccountIdCompatible;
 use Dezer\TinkoffInvestApiClient\Tests\Unit\AbstractUnitTest;
 

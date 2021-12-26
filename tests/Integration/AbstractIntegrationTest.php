@@ -2,18 +2,16 @@
 
 namespace Dezer\TinkoffInvestApiClient\Tests\Integration;
 
-use Dezer\TinkoffInvestApiClient\Actions\Sandbox\RegisterAccountAction;
 use Dezer\TinkoffInvestApiClient\Dto\BrokerAccountId;
-use Dezer\TinkoffInvestApiClient\Dto\Sandbox\RegisterResponse;
-use Dezer\TinkoffInvestApiClient\Enums\ResponseStatusCodeEnum;
 use Dezer\TinkoffInvestApiClient\TinkoffInvestApiClient;
+use Dezer\TinkoffInvestApiClient\TinkoffInvestClientSDK;
 use GuzzleHttp\Client;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
 
 class AbstractIntegrationTest extends TestCase
 {
-    protected TinkoffInvestApiClient $client;
+    protected TinkoffInvestClientSDK $sdk;
 
     protected function setUp(): void
     {
@@ -23,23 +21,13 @@ class AbstractIntegrationTest extends TestCase
             'timeout' => 5.0
         ]);
 
-        $this->client = new TinkoffInvestApiClient(
+        $client = new TinkoffInvestApiClient(
             $guzzleClient,
             $_ENV['TINKOFF_SECRET_KEY'],
             $this->createMock(LoggerInterface::class)
         );
+        $client->setBrokerAccountId(new BrokerAccountId($_ENV['TINKOFF_BROKER_ACCOUNT_ID']));
 
-        $registerAction = new RegisterAccountAction();
-
-        /** @var RegisterResponse $registeredAccount */
-        $registeredAccount = $this->client->perform($registerAction);
-
-        if ($registeredAccount->getStatus()->equals(ResponseStatusCodeEnum::ERROR())) {
-            throw new \RuntimeException('Не удалось зарегистрировать акканут.');
-        }
-
-        $this->client->setBrokerAccountId(
-            new BrokerAccountId($registeredAccount->getPayload()->getBrokerAccountId())
-        );
+        $this->sdk = new TinkoffInvestClientSDK($client, $this->createMock(LoggerInterface::class));
     }
 }

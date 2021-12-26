@@ -7,11 +7,11 @@ namespace Dezer\TinkoffInvestApiClient\Tests\Integration\Action\Market;
 use Dezer\TinkoffInvestApiClient\Enums\ResponseStatusCodeEnum;
 use Dezer\TinkoffInvestApiClient\Tests\Integration\AbstractIntegrationTest;
 
-class GetStocksActionIntegrationTest extends AbstractIntegrationTest
+class GetETFsActionIntegrationTest extends AbstractIntegrationTest
 {
-    public function testSuccessCanGetStocks(): void
+    public function testSuccessCanGetETFs(): void
     {
-        $response = $this->sdk->getStocks();
+        $response = $this->sdk->getETFs();
 
         self::assertTrue($response->getStatus()->equals(ResponseStatusCodeEnum::OK()));
     }

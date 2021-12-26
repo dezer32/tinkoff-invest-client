@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Dezer\TinkoffInvestApiClient\Tests\Unit\Actions\Portfolio;
 
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;

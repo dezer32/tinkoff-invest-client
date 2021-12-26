@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Dezer\TinkoffInvestApiClient\Tests\Integration\Action\Market;
 
 use Dezer\TinkoffInvestApiClient\Enums\ResponseStatusCodeEnum;

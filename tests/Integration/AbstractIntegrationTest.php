@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Dezer\TinkoffInvestApiClient\Tests\Integration;
 
 use Dezer\TinkoffInvestApiClient\Dto\BrokerAccountId;

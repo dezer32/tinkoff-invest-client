@@ -23,7 +23,7 @@ class OrderBookPayload extends BaseDataTransferObject
     #[CastWith(EnumCaster::class)]
     public TradeStatusEnum $tradeStatus;
     public float $minPriceIncrement;
-    public float $faceValue;
+    public ?float $faceValue;
     public float $lastPrice;
     public float $closePrice;
     public float $limitUp;
@@ -59,7 +59,7 @@ class OrderBookPayload extends BaseDataTransferObject
         return $this->minPriceIncrement;
     }
 
-    public function getFaceValue(): float
+    public function getFaceValue(): ?float
     {
         return $this->faceValue;
     }

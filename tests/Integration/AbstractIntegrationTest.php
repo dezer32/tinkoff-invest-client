@@ -13,6 +13,8 @@ use Psr\Log\LoggerInterface;
 
 class AbstractIntegrationTest extends TestCase
 {
+    protected const FIGI = 'BBG000B9XRY4';
+
     protected TinkoffInvestClientSDK $sdk;
 
     protected function setUp(): void

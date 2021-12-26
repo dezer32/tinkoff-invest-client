@@ -7,10 +7,13 @@ namespace Dezer\TinkoffInvestApiClient;
 use Dezer\TinkoffInvestApiClient\Actions\Market\GetBondsAction;
 use Dezer\TinkoffInvestApiClient\Actions\Market\GetCurrenciesAction;
 use Dezer\TinkoffInvestApiClient\Actions\Market\GetETFsAction;
+use Dezer\TinkoffInvestApiClient\Actions\Market\GetOrderBookAction;
 use Dezer\TinkoffInvestApiClient\Actions\Market\GetStocksAction;
 use Dezer\TinkoffInvestApiClient\Dto\Market\Bonds\InvestmentSecuritiesBondsResponse;
 use Dezer\TinkoffInvestApiClient\Dto\Market\Currencies\InvestmentSecuritiesCurrenciesResponse;
 use Dezer\TinkoffInvestApiClient\Dto\Market\ETFs\InvestmentSecuritiesETFsResponse;
+use Dezer\TinkoffInvestApiClient\Dto\Market\OrderBookCondition;
+use Dezer\TinkoffInvestApiClient\Dto\Market\OrderBookResponse;
 use Dezer\TinkoffInvestApiClient\Dto\Market\Stocks\InvestmentSecuritiesStocksResponse;
 
 class TinkoffInvestClientSDK
@@ -46,6 +49,13 @@ class TinkoffInvestClientSDK
     public function getCurrencies(): InvestmentSecuritiesCurrenciesResponse
     {
         $action = new GetCurrenciesAction();
+
+        return $this->client->perform($action);
+    }
+
+    public function getOrderBook(OrderBookCondition $condition): OrderBookResponse
+    {
+        $action = new GetOrderBookAction($condition);
 
         return $this->client->perform($action);
     }

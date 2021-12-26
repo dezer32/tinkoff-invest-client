@@ -6,7 +6,7 @@ namespace Dezer\TinkoffInvestApiClient\Actions\Market;
 
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;
 use Dezer\TinkoffInvestApiClient\AbstractBaseHttpAction;
-use Dezer\TinkoffInvestApiClient\Dto\Market\InvestmentSecuritiesResponse;
+use Dezer\TinkoffInvestApiClient\Dto\Market\Currencies\InvestmentSecuritiesCurrenciesResponse;
 use GuzzleHttp\Psr7\Response;
 
 class GetCurrenciesAction extends AbstractBaseHttpAction
@@ -21,8 +21,8 @@ class GetCurrenciesAction extends AbstractBaseHttpAction
         return 'market/currencies';
     }
 
-    public function mapResponse(Response $response): InvestmentSecuritiesResponse
+    public function mapResponse(Response $response): InvestmentSecuritiesCurrenciesResponse
     {
-        return new InvestmentSecuritiesResponse($this->getJsonFromResponse($response));
+        return new InvestmentSecuritiesCurrenciesResponse($this->getJsonFromResponse($response));
     }
 }

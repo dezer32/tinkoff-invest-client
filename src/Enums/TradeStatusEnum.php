@@ -13,5 +13,6 @@ use MyCLabs\Enum\Enum;
 class TradeStatusEnum extends Enum
 {
     public const NORMAL_TRADING = 'NormalTrading';
+
     public const NOT_AVAILABLE_TRADING = 'NotAvailableForTrading';
 }

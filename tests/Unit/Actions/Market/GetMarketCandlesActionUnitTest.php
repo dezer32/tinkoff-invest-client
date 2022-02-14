@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Tests\Unit\Actions\Market;
+namespace Dezer\Investing\Tinkoff\ApiClient\Tests\Unit\Actions\Market;
 
 use DateTime;
 use DateTimeInterface;
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;
-use Dezer\TinkoffInvestApiClient\Actions\Market\GetCandlesAction;
-use Dezer\TinkoffInvestApiClient\Contracts\BrokerAccountIdCompatible;
-use Dezer\TinkoffInvestApiClient\Dto\Market\CandlesCondition;
-use Dezer\TinkoffInvestApiClient\Enums\IntervalEnum;
-use Dezer\TinkoffInvestApiClient\Tests\Unit\AbstractUnitTest;
+use Dezer\Investing\Tinkoff\ApiClient\Actions\Market\GetCandlesAction;
+use Dezer\Investing\Tinkoff\ApiClient\Contracts\BrokerAccountIdCompatible;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\Market\CandlesCondition;
+use Dezer\Investing\Tinkoff\ApiClient\Enums\IntervalEnum;
+use Dezer\Investing\Tinkoff\ApiClient\Tests\Unit\AbstractUnitTest;
 
 class GetMarketCandlesActionUnitTest extends AbstractUnitTest
 {

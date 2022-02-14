@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Dto\Sandbox;
+namespace Dezer\Investing\Tinkoff\ApiClient\Dto\Sandbox;
 
 use Spatie\DataTransferObject\Attributes\MapFrom;
 

@@ -4,12 +4,12 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Dezer\\TinkoffInvestApiClient\\": "src/"
+      "Dezer\\Investing\\Tinkoff\\ApiClient\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Dezer\\TinkoffInvestApiClient\\Tests\\": "tests/"
+      "Dezer\\Investing\\Tinkoff\\ApiClient\\Tests\\": "tests/"
     }
   },
   "authors": [

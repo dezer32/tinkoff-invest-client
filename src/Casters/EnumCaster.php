@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Casters;
+namespace Dezer\Investing\Tinkoff\ApiClient\Casters;
 
 use LogicException;
 use MyCLabs\Enum\Enum;

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Dto\Market;
+namespace Dezer\Investing\Tinkoff\ApiClient\Dto\Market;
 
-use Dezer\TinkoffInvestApiClient\Dto\BaseResponse;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\BaseResponse;
 
 class CandlesResponse extends BaseResponse
 {

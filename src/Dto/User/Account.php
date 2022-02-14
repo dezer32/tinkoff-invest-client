@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Dto\User;
+namespace Dezer\Investing\Tinkoff\ApiClient\Dto\User;
 
-use Dezer\TinkoffInvestApiClient\Casters\EnumCaster;
-use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
-use Dezer\TinkoffInvestApiClient\Enums\BrokerAccountTypeEnum;
+use Dezer\Investing\Tinkoff\ApiClient\Casters\EnumCaster;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\BaseDataTransferObject;
+use Dezer\Investing\Tinkoff\ApiClient\Enums\BrokerAccountTypeEnum;
 use Spatie\DataTransferObject\Attributes\CastWith;
 
 class Account extends BaseDataTransferObject

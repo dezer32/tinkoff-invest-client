@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Dto\Orders;
+namespace Dezer\Investing\Tinkoff\ApiClient\Dto\Orders;
 
-use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\BaseDataTransferObject;
 use Ramsey\Uuid\UuidInterface;
 use Spatie\DataTransferObject\Attributes\MapFrom;
 

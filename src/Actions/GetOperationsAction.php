@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Actions;
+namespace Dezer\Investing\Tinkoff\ApiClient\Actions;
 
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;
-use Dezer\TinkoffInvestApiClient\AbstractBaseHttpAction;
-use Dezer\TinkoffInvestApiClient\Contracts\BrokerAccountIdCompatible;
-use Dezer\TinkoffInvestApiClient\Dto\Operations\OperationsCondition;
-use Dezer\TinkoffInvestApiClient\Dto\Operations\OperationsResponse;
+use Dezer\Investing\Tinkoff\ApiClient\AbstractBaseHttpAction;
+use Dezer\Investing\Tinkoff\ApiClient\Contracts\BrokerAccountIdCompatible;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\Operations\OperationsCondition;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\Operations\OperationsResponse;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\RequestOptions;
 

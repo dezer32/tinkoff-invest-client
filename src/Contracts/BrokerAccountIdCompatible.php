@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Contracts;
+namespace Dezer\Investing\Tinkoff\ApiClient\Contracts;
 
 interface BrokerAccountIdCompatible
 {

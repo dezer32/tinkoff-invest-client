@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Dto\Operations;
+namespace Dezer\Investing\Tinkoff\ApiClient\Dto\Operations;
 
 use DateTimeInterface;
-use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\BaseDataTransferObject;
 
 class Trade extends BaseDataTransferObject
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Enums;
+namespace Dezer\Investing\Tinkoff\ApiClient\Enums;
 
 use MyCLabs\Enum\Enum;
 

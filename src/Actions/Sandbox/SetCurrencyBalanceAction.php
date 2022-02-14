@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Actions\Sandbox;
+namespace Dezer\Investing\Tinkoff\ApiClient\Actions\Sandbox;
 
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;
 use Dezer\BaseHttpClient\Exceptions\ResponseException;
-use Dezer\TinkoffInvestApiClient\AbstractBaseHttpAction;
-use Dezer\TinkoffInvestApiClient\Contracts\BrokerAccountIdCompatible;
-use Dezer\TinkoffInvestApiClient\Dto\EmptyResponse;
-use Dezer\TinkoffInvestApiClient\Dto\Sandbox\CurrencyBalance;
+use Dezer\Investing\Tinkoff\ApiClient\AbstractBaseHttpAction;
+use Dezer\Investing\Tinkoff\ApiClient\Contracts\BrokerAccountIdCompatible;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\EmptyResponse;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\Sandbox\CurrencyBalance;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\RequestOptions;
 use Spatie\DataTransferObject\Exceptions\UnknownProperties;

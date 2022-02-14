@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Actions;
+namespace Dezer\Investing\Tinkoff\ApiClient\Actions;
 
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;
-use Dezer\TinkoffInvestApiClient\AbstractBaseHttpAction;
-use Dezer\TinkoffInvestApiClient\Dto\User\AccountsResponse;
+use Dezer\Investing\Tinkoff\ApiClient\AbstractBaseHttpAction;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\User\AccountsResponse;
 use GuzzleHttp\Psr7\Response;
 
 class GetUserAccountsAction extends AbstractBaseHttpAction

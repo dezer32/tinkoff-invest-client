@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Tests\Integration\Action\Market;
+namespace Dezer\Investing\Tinkoff\ApiClient\Tests\Integration\Action\Market;
 
 use DateTime;
-use Dezer\TinkoffInvestApiClient\Dto\Market\CandlesCondition;
-use Dezer\TinkoffInvestApiClient\Enums\IntervalEnum;
-use Dezer\TinkoffInvestApiClient\Enums\ResponseStatusCodeEnum;
-use Dezer\TinkoffInvestApiClient\Tests\Integration\AbstractIntegrationTest;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\Market\CandlesCondition;
+use Dezer\Investing\Tinkoff\ApiClient\Enums\IntervalEnum;
+use Dezer\Investing\Tinkoff\ApiClient\Enums\ResponseStatusCodeEnum;
+use Dezer\Investing\Tinkoff\ApiClient\Tests\Integration\AbstractIntegrationTest;
 
 class GetCandlesActionIntegrationTest extends AbstractIntegrationTest
 {

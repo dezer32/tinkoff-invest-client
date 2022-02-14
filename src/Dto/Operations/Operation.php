@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Dto\Operations;
+namespace Dezer\Investing\Tinkoff\ApiClient\Dto\Operations;
 
 use DateTimeInterface;
-use Dezer\TinkoffInvestApiClient\Casters\EnumCaster;
-use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
-use Dezer\TinkoffInvestApiClient\Dto\CurrencyValue;
-use Dezer\TinkoffInvestApiClient\Enums\CurrencyEnum;
-use Dezer\TinkoffInvestApiClient\Enums\InstrumentTypeEnum;
-use Dezer\TinkoffInvestApiClient\Enums\OperationStatusEnum;
-use Dezer\TinkoffInvestApiClient\Enums\OperationTypeEnum;
+use Dezer\Investing\Tinkoff\ApiClient\Casters\EnumCaster;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\BaseDataTransferObject;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\CurrencyValue;
+use Dezer\Investing\Tinkoff\ApiClient\Enums\CurrencyEnum;
+use Dezer\Investing\Tinkoff\ApiClient\Enums\InstrumentTypeEnum;
+use Dezer\Investing\Tinkoff\ApiClient\Enums\OperationStatusEnum;
+use Dezer\Investing\Tinkoff\ApiClient\Enums\OperationTypeEnum;
 use Spatie\DataTransferObject\Attributes\CastWith;
 use Spatie\DataTransferObject\Casters\ArrayCaster;
 

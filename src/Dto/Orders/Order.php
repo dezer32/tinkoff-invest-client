@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Dto\Orders;
+namespace Dezer\Investing\Tinkoff\ApiClient\Dto\Orders;
 
-use Dezer\TinkoffInvestApiClient\Casters\EnumCaster;
-use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
-use Dezer\TinkoffInvestApiClient\Enums\OperationStatusEnum;
-use Dezer\TinkoffInvestApiClient\Enums\OperationTypeEnum;
-use Dezer\TinkoffInvestApiClient\Enums\OrderTypeEnum;
+use Dezer\Investing\Tinkoff\ApiClient\Casters\EnumCaster;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\BaseDataTransferObject;
+use Dezer\Investing\Tinkoff\ApiClient\Enums\OperationStatusEnum;
+use Dezer\Investing\Tinkoff\ApiClient\Enums\OperationTypeEnum;
+use Dezer\Investing\Tinkoff\ApiClient\Enums\OrderTypeEnum;
 use Spatie\DataTransferObject\Attributes\CastWith;
 
 class Order extends BaseDataTransferObject

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient;
+namespace Dezer\Investing\Tinkoff\ApiClient;
 
 use Dezer\BaseHttpClient\BaseHttpAction;
 use Dezer\BaseHttpClient\Exceptions\RequestException;
 use Dezer\BaseHttpClient\Exceptions\ResponseException;
-use Dezer\TinkoffInvestApiClient\Dto\ErrorResponse;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\ErrorResponse;
 use GuzzleHttp\Psr7\Response;
 use JsonException;
 use Spatie\DataTransferObject\Exceptions\UnknownProperties;

@@ -22,35 +22,35 @@ interface ClientSDKInterface
      * @throws ClientException
      * @throws RequestException
      */
-    public function getStocks(): InvestmentSecuritiesStocksResponse;
+    public function getStocks(): InvestmentSecuritiesStocksResponse|ErrorResponse;
 
     /**
      * @throws ClientException
      * @throws RequestException
      */
-    public function getBonds(): InvestmentSecuritiesBondsResponse;
+    public function getBonds(): InvestmentSecuritiesBondsResponse|ErrorResponse;
 
     /**
      * @throws ClientException
      * @throws RequestException
      */
-    public function getETFs(): InvestmentSecuritiesETFsResponse;
+    public function getETFs(): InvestmentSecuritiesETFsResponse|ErrorResponse;
 
     /**
      * @throws ClientException
      * @throws RequestException
      */
-    public function getCurrencies(): InvestmentSecuritiesCurrenciesResponse;
+    public function getCurrencies(): InvestmentSecuritiesCurrenciesResponse|ErrorResponse;
 
     /**
      * @throws ClientException
      * @throws RequestException
      */
-    public function getOrderBook(OrderBookCondition $condition): OrderBookResponse;
+    public function getOrderBook(OrderBookCondition $condition): OrderBookResponse|ErrorResponse;
 
     /**
      * @throws ClientException
      * @throws RequestException
      */
-    public function getCandles(CandlesCondition $condition): CandlesResponse;
+    public function getCandles(CandlesCondition $condition): CandlesResponse|ErrorResponse;
 }

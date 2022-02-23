@@ -10,6 +10,7 @@ use Dezer\Investing\Tinkoff\ApiClient\Actions\Market\GetCurrenciesAction;
 use Dezer\Investing\Tinkoff\ApiClient\Actions\Market\GetETFsAction;
 use Dezer\Investing\Tinkoff\ApiClient\Actions\Market\GetOrderBookAction;
 use Dezer\Investing\Tinkoff\ApiClient\Actions\Market\GetStocksAction;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\ErrorResponse;
 use Dezer\Investing\Tinkoff\ApiClient\Dto\Market\Bonds\InvestmentSecuritiesBondsResponse;
 use Dezer\Investing\Tinkoff\ApiClient\Dto\Market\CandlesCondition;
 use Dezer\Investing\Tinkoff\ApiClient\Dto\Market\CandlesResponse;
@@ -28,42 +29,42 @@ class ClientSDK implements ClientSDKInterface
         $this->client = $client;
     }
 
-    public function getStocks(): InvestmentSecuritiesStocksResponse
+    public function getStocks(): InvestmentSecuritiesStocksResponse|ErrorResponse
     {
         $action = new GetStocksAction();
 
         return $this->client->perform($action);
     }
 
-    public function getBonds(): InvestmentSecuritiesBondsResponse
+    public function getBonds(): InvestmentSecuritiesBondsResponse|ErrorResponse
     {
         $action = new GetBondsAction();
 
         return $this->client->perform($action);
     }
 
-    public function getETFs(): InvestmentSecuritiesETFsResponse
+    public function getETFs(): InvestmentSecuritiesETFsResponse|ErrorResponse
     {
         $action = new GetETFsAction();
 
         return $this->client->perform($action);
     }
 
-    public function getCurrencies(): InvestmentSecuritiesCurrenciesResponse
+    public function getCurrencies(): InvestmentSecuritiesCurrenciesResponse|ErrorResponse
     {
         $action = new GetCurrenciesAction();
 
         return $this->client->perform($action);
     }
 
-    public function getOrderBook(OrderBookCondition $condition): OrderBookResponse
+    public function getOrderBook(OrderBookCondition $condition): OrderBookResponse|ErrorResponse
     {
         $action = new GetOrderBookAction($condition);
 
         return $this->client->perform($action);
     }
 
-    public function getCandles(CandlesCondition $condition): CandlesResponse
+    public function getCandles(CandlesCondition $condition): CandlesResponse|ErrorResponse
     {
         $action = new GetCandlesAction($condition);
 

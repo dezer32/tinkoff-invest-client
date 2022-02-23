@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Dto\Portfolio;
+namespace Dezer\Investing\Tinkoff\ApiClient\Dto\Portfolio;
 
-use Dezer\TinkoffInvestApiClient\Dto\BaseResponse;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\BaseResponse;
 
 class CurrenciesResponse extends BaseResponse
 {

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Dto\Market;
+namespace Dezer\Investing\Tinkoff\ApiClient\Dto\Market;
 
-use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\BaseDataTransferObject;
 use Spatie\DataTransferObject\Attributes\MapFrom;
 
 class SearchByTickerCondition extends BaseDataTransferObject

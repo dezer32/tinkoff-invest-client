@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Enums;
+namespace Dezer\Investing\Tinkoff\ApiClient\Enums;
 
 use MyCLabs\Enum\Enum;
 
@@ -13,5 +13,6 @@ use MyCLabs\Enum\Enum;
 class TradeStatusEnum extends Enum
 {
     public const NORMAL_TRADING = 'NormalTrading';
+
     public const NOT_AVAILABLE_TRADING = 'NotAvailableForTrading';
 }

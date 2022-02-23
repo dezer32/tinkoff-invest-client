@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Actions\Sandbox;
+namespace Dezer\Investing\Tinkoff\ApiClient\Actions\Sandbox;
 
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;
 use Dezer\BaseHttpClient\Exceptions\ResponseException;
-use Dezer\TinkoffInvestApiClient\AbstractBaseHttpAction;
-use Dezer\TinkoffInvestApiClient\Dto\Sandbox\Register as RegisterDto;
-use Dezer\TinkoffInvestApiClient\Dto\Sandbox\RegisterResponse;
+use Dezer\Investing\Tinkoff\ApiClient\AbstractBaseHttpAction;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\Sandbox\Register as RegisterDto;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\Sandbox\RegisterResponse;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\RequestOptions;
 use Spatie\DataTransferObject\Exceptions\UnknownProperties;

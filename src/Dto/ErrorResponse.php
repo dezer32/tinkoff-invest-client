@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Dto;
+namespace Dezer\Investing\Tinkoff\ApiClient\Dto;
 
 class ErrorResponse extends BaseResponse
 {

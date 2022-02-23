@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Tests\Unit\Actions\Market;
+namespace Dezer\Investing\Tinkoff\ApiClient\Tests\Unit\Actions\Market;
 
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;
-use Dezer\TinkoffInvestApiClient\Actions\Market\SearchByTickerAction;
-use Dezer\TinkoffInvestApiClient\Contracts\BrokerAccountIdCompatible;
-use Dezer\TinkoffInvestApiClient\Dto\Market\SearchByTickerCondition;
-use Dezer\TinkoffInvestApiClient\Tests\Unit\AbstractUnitTest;
+use Dezer\Investing\Tinkoff\ApiClient\Actions\Market\SearchByTickerAction;
+use Dezer\Investing\Tinkoff\ApiClient\Contracts\BrokerAccountIdCompatible;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\Market\SearchByTickerCondition;
+use Dezer\Investing\Tinkoff\ApiClient\Tests\Unit\AbstractUnitTest;
 
 class SearchByTickerActionUnitTest extends AbstractUnitTest
 {

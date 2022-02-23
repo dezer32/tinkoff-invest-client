@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Tests\Unit;
+namespace Dezer\Investing\Tinkoff\ApiClient\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 

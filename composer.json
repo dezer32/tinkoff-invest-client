@@ -4,12 +4,12 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Dezer\\TinkoffInvestApiClient\\": "src/"
+      "Dezer\\Investing\\Tinkoff\\ApiClient\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Dezer\\TinkoffInvestApiClient\\Tests\\": "tests/"
+      "Dezer\\Investing\\Tinkoff\\ApiClient\\Tests\\": "tests/"
     }
   },
   "authors": [
@@ -22,7 +22,7 @@
   "require": {
     "php": "^8.0",
     "dezer/base-http-client": "^0.0",
-    "roave/security-advisories": "dev-master",
+    "roave/security-advisories": "dev-latest",
     "spatie/data-transfer-object": "^3.7",
     "myclabs/php-enum": "^1.8",
     "symfony/polyfill": "^1.23",

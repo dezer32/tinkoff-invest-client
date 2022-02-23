@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Tests\Unit\Actions\Sandbox;
+namespace Dezer\Investing\Tinkoff\ApiClient\Tests\Unit\Actions\Sandbox;
 
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;
-use Dezer\TinkoffInvestApiClient\Actions\Sandbox\RegisterAccountAction;
-use Dezer\TinkoffInvestApiClient\Dto\Sandbox\Register;
-use Dezer\TinkoffInvestApiClient\Tests\Unit\AbstractUnitTest;
+use Dezer\Investing\Tinkoff\ApiClient\Actions\Sandbox\RegisterAccountAction;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\Sandbox\Register;
+use Dezer\Investing\Tinkoff\ApiClient\Tests\Unit\AbstractUnitTest;
 
 class SandboxRegisterActionUnitTest extends AbstractUnitTest
 {

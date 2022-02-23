@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient;
+namespace Dezer\Investing\Tinkoff\ApiClient;
 
 use Dezer\BaseHttpClient\ApiClient;
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;
-use Dezer\TinkoffInvestApiClient\Contracts\BrokerAccountIdCompatible;
-use Dezer\TinkoffInvestApiClient\Dto\BrokerAccountId;
-use GuzzleHttp\Client;
+use Dezer\Investing\Tinkoff\ApiClient\Contracts\BrokerAccountIdCompatible;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\BrokerAccountId;
+use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\RequestOptions;
 use Psr\Log\LoggerInterface;
 
-class TinkoffInvestApiClient extends ApiClient
+class Client extends ApiClient
 {
     private ?BrokerAccountId $brokerAccountId = null;
     private string $secretKey;
 
-    public function __construct(Client $client, string $secretKey, LoggerInterface $logger)
+    public function __construct(GuzzleClient $client, string $secretKey, LoggerInterface $logger)
     {
         parent::__construct($client, $logger);
         $this->secretKey = $secretKey;

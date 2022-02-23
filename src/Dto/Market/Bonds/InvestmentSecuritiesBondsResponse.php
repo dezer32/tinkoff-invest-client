@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Dto\Market\Bonds;
+namespace Dezer\Investing\Tinkoff\ApiClient\Dto\Market\Bonds;
 
-use Dezer\TinkoffInvestApiClient\Dto\BaseResponse;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\BaseResponse;
 
 class InvestmentSecuritiesBondsResponse extends BaseResponse
 {

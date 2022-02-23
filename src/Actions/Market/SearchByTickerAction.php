@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Actions\Market;
+namespace Dezer\Investing\Tinkoff\ApiClient\Actions\Market;
 
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;
-use Dezer\TinkoffInvestApiClient\AbstractBaseHttpAction;
-use Dezer\TinkoffInvestApiClient\Dto\Market\InvestmentSecuritiesResponse;
-use Dezer\TinkoffInvestApiClient\Dto\Market\SearchByTickerCondition;
+use Dezer\Investing\Tinkoff\ApiClient\AbstractBaseHttpAction;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\Market\InvestmentSecuritiesResponse;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\Market\SearchByTickerCondition;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\RequestOptions;
 

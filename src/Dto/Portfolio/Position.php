@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Dto\Portfolio;
+namespace Dezer\Investing\Tinkoff\ApiClient\Dto\Portfolio;
 
-use Dezer\TinkoffInvestApiClient\Casters\EnumCaster;
-use Dezer\TinkoffInvestApiClient\Dto\BaseDataTransferObject;
-use Dezer\TinkoffInvestApiClient\Dto\CurrencyValue;
-use Dezer\TinkoffInvestApiClient\Enums\InstrumentTypeEnum;
+use Dezer\Investing\Tinkoff\ApiClient\Casters\EnumCaster;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\BaseDataTransferObject;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\CurrencyValue;
+use Dezer\Investing\Tinkoff\ApiClient\Enums\InstrumentTypeEnum;
 use Spatie\DataTransferObject\Attributes\CastWith;
 
 class Position extends BaseDataTransferObject

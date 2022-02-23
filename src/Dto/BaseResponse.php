@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Dto;
+namespace Dezer\Investing\Tinkoff\ApiClient\Dto;
 
-use Dezer\TinkoffInvestApiClient\Casters\EnumCaster;
-use Dezer\TinkoffInvestApiClient\Enums\ResponseStatusCodeEnum;
+use Dezer\Investing\Tinkoff\ApiClient\Casters\EnumCaster;
+use Dezer\Investing\Tinkoff\ApiClient\Enums\ResponseStatusCodeEnum;
 use Spatie\DataTransferObject\Attributes\CastWith;
 
 class BaseResponse extends BaseDataTransferObject

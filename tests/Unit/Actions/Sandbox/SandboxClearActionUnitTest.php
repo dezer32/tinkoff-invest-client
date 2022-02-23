@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Tests\Unit\Actions\Sandbox;
+namespace Dezer\Investing\Tinkoff\ApiClient\Tests\Unit\Actions\Sandbox;
 
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;
-use Dezer\TinkoffInvestApiClient\Actions\Sandbox\ClearPositionsAction;
-use Dezer\TinkoffInvestApiClient\Contracts\BrokerAccountIdCompatible;
-use Dezer\TinkoffInvestApiClient\Tests\Unit\AbstractUnitTest;
+use Dezer\Investing\Tinkoff\ApiClient\Actions\Sandbox\ClearPositionsAction;
+use Dezer\Investing\Tinkoff\ApiClient\Contracts\BrokerAccountIdCompatible;
+use Dezer\Investing\Tinkoff\ApiClient\Tests\Unit\AbstractUnitTest;
 
 class SandboxClearActionUnitTest extends AbstractUnitTest
 {

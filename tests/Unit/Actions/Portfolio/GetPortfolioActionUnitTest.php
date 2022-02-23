@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Tests\Unit\Actions\Portfolio;
+namespace Dezer\Investing\Tinkoff\ApiClient\Tests\Unit\Actions\Portfolio;
 
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;
-use Dezer\TinkoffInvestApiClient\Actions\Portfolio\GetPortfolioAction;
-use Dezer\TinkoffInvestApiClient\Contracts\BrokerAccountIdCompatible;
-use Dezer\TinkoffInvestApiClient\Tests\Unit\AbstractUnitTest;
+use Dezer\Investing\Tinkoff\ApiClient\Actions\Portfolio\GetPortfolioAction;
+use Dezer\Investing\Tinkoff\ApiClient\Contracts\BrokerAccountIdCompatible;
+use Dezer\Investing\Tinkoff\ApiClient\Tests\Unit\AbstractUnitTest;
 
 class GetPortfolioActionUnitTest extends AbstractUnitTest
 {

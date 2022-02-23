@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Actions\Portfolio;
+namespace Dezer\Investing\Tinkoff\ApiClient\Actions\Portfolio;
 
 use Dezer\BaseHttpClient\Contracts\HttpActionInterface;
-use Dezer\TinkoffInvestApiClient\AbstractBaseHttpAction;
-use Dezer\TinkoffInvestApiClient\Contracts\BrokerAccountIdCompatible;
-use Dezer\TinkoffInvestApiClient\Dto\Portfolio\CurrenciesResponse;
+use Dezer\Investing\Tinkoff\ApiClient\AbstractBaseHttpAction;
+use Dezer\Investing\Tinkoff\ApiClient\Contracts\BrokerAccountIdCompatible;
+use Dezer\Investing\Tinkoff\ApiClient\Dto\Portfolio\CurrenciesResponse;
 use GuzzleHttp\Psr7\Response;
 
 class GetPortfolioCurrenciesAction extends AbstractBaseHttpAction implements BrokerAccountIdCompatible

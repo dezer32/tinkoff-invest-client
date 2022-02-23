@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Dezer\TinkoffInvestApiClient\Dto;
+namespace Dezer\Investing\Tinkoff\ApiClient\Dto;
 
 use DateTimeInterface;
-use Dezer\TinkoffInvestApiClient\Casters\DateTimeInterfaceCaster;
-use Dezer\TinkoffInvestApiClient\Casters\UuidCaster;
+use Dezer\Investing\Tinkoff\ApiClient\Casters\DateTimeInterfaceCaster;
+use Dezer\Investing\Tinkoff\ApiClient\Casters\UuidCaster;
 use MyCLabs\Enum\Enum;
 use Ramsey\Uuid\UuidInterface;
 use Spatie\DataTransferObject\Attributes\DefaultCast;
